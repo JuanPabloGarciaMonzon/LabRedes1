@@ -1,0 +1,42 @@
+Comandos GNS3
+
+Routers
+
+No Timeout for not making work more our local hardware resources
+---------------------
+conf t
+line console 0
+no exec-timeout
+end
+wr
+---------------------
+
+Change hostnames
+---------------------
+conf t
+hostname nombre
+end
+wr
+---------------------
+
+
+Configure an Interface Channel (Estos valores son solo de ejemplo, ustedes la IP o el número de puerto lo deben
+de colocar según lo que se les este pidiendo)
+---------------------
+conf t
+int fastethernet 0/0
+no shutdown
+no switchport
+ip address 192.168.1.1 255.255.255.0
+end
+wr
+---------------------
+
+
+Show commands
+---------------------
+sh int status (show interface status)
+sh version
+sh ip int br (show ip interface brief (resumen) )
+
+---------------------
